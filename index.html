@@ -10,8 +10,8 @@
         padding: 0;
       }
       h1 {
+        font-size: 7vw;
         margin-top: 0;
-        font-size: 4em;
       }
       a {
         color: #f00;
@@ -19,7 +19,7 @@
 
       /* HERO STYLES */
       .full-hero {
-        background-color: #c7dbfc;
+        background-color: #5cd1ac;
         height: 25vw;
       }
 
@@ -55,15 +55,16 @@
       /* BIO STYLES */
       .bio-wrapper {
         font-size: 24px;
-        margin: 0 auto 42px;
+        margin: auto;
         max-width: 960px;
         overflow: hidden;
       }
       .bio-box {
-        /* border: 1px solid #000; */
-        border-width: 5px 10px 1px 3px;
-        border-style: dotted dashed hidden solid;
-        border-color: #0f0 #f0f #000 #0ff;
+        border: 1px solid;
+        /* border-width: 10px 10px 10px 10px;
+        border-style: groove dashed double outset;
+        border-color: #0f0 #f0f #000 #0ff; */
+        border-color: transparent #5dbcd2 #5dbcd2 transparent;
         box-sizing: border-box;
         float: left;
         font-size: 1rem;
@@ -74,7 +75,7 @@
       .bio-box h3 {
         color: #fff;
         font-size: 1.5em;
-        margin: -70px 0 1em;
+        margin: -40px 0 1em;
         text-align: center;
       }
       .bio-box img {
@@ -85,31 +86,14 @@
         line-height: 1.5;
       }
       .bio-copy a {
-        color: #080;
-      }
-
-      .test-box {
-        background-color: #9db6dd;
-        display: inline-block;
-        margin: 50px;
-        width: 200px;
-      }
-      .test-box-nosizing {
-        border: 10px solid #000;
-        padding: 40px;
-      }
-      .test-box-sizing {
-        box-sizing: border-box;
-        display: block;
-        margin-top: 100px;
-        width: auto;
+        color: #2faaa5;
       }
     </style>
   </head>
 
   <body>
     <div class="full-hero hero-home">
-      <h1>100 WAYS TO</h1>
+      <h1>I'm an h1</h1>
       <ul class="social-list">
         <li>
           <a href="https://example.com/" class="social-link">Fb</a>
@@ -123,16 +107,16 @@
       </ul>
     </div>
 
-    <h2>I'm an h2</h2>
-    <p style="font-size: 16px">I am 16 pixels.</p>
+    <h2>This is a learning page</h2>
+    <p style="font-size: 16px">Current status: 41% through <a href="https://www.learnenough.com/css-and-layout" target="_blank">Learn Enough CSS &amp; Layout</a></p>
     <div class="bio-wrapper">
       <div class="bio-box">
         <img src="http://placekitten.com/200/200">
-        <h3>Make Money Online</h3>
-        <a href="https://twitter.com/mhartl" class="social-link">here</a>
+        <h3>Michael Hartl</h3>
+        <a href="https://twitter.com/mhartl" class="social-link">Tw</a>
         <div class="bio-copy">
           <p>
-            Known for his dazzling charm, rapier wit, and unrivaled humility,
+            Known for his dazzling charm, <a class="social-link">Tw</a> rapier wit, and unrivaled humility,
             Michael is the creator of the
             <a href="https://www.railstutorial.org/">Ruby on Rails
             Tutorial</a> and principal author of the
@@ -150,8 +134,8 @@
       </div>
       <div class="bio-box">
         <img src="http://placekitten.com/235/235">
-        <h3>Make Money in 2020</h3>
-        <a href="https://twitter.com/leedonahoe" class="social-link">here</a>
+        <h3>Lee Donahoe</h3>
+        <a href="https://twitter.com/leedonahoe" class="social-link">Tw</a>
         <div class="bio-copy">
           <p>
             When he's not literally swimming with sharks or hunting powder stashes on
@@ -163,8 +147,8 @@
       </div>
       <div class="bio-box">
         <img src="http://placekitten.com/245/245">
-        <h3>Earn Money Writing Words</h3>
-        <a href="https://twitter.com/nickmerwin" class="social-link">here</a>
+        <h3>Nick Merwin</h3>
+        <a href="https://twitter.com/nickmerwin" class="social-link">Tw</a>
         <div class="bio-copy">
           <p>
             You may have seen him shredding guitar live with Capital Cities on Jimmy
@@ -176,8 +160,7 @@
       </div>
       <div class="bio-box">
         <img src="http://placekitten.com/350/350">
-        <h3>Grow Muscle
-        <br>&nbsp;</h3>
+        <h3>??</h3>
         <div class="bio-copy">
           <p>
             The Future
@@ -214,16 +197,5 @@
     <a href="https://learnenough.com/">learnenough.com</a>.
   </p>
 
-    <div>
-      <div class="test-box">
-        200px wide
-      </div>
-      <div class="test-box test-box-nosizing">
-        200px wide + border + padding = 300px
-      </div>
-      <div class="test-box test-box-nosizing test-box-sizing">
-        200px wide + border + padding + box-sizing: border-box = 200px
-      </div>
-    </div>
   </body>
 </html>
