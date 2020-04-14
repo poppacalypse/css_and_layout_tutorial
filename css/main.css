@@ -13,9 +13,26 @@ a {
   color: #f00;
 }
 
+/* HEADER STYLES */
+.header-nav {
+  float: right;
+  padding: 5.5vh 60px 0 0;
+}
+.header-nav > li {
+  display: inline-block;
+  margin-left: 1em;
+}
+.header-nav a {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 /* HERO STYLES */
 .full-hero {
-  background-color: #5cd1ac;
+  background-color: #36b592;
   height: 25vw;
 }
 
