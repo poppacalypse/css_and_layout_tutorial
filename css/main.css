@@ -5,12 +5,17 @@ body {
 h1 {
   font-size: 7vw;
   margin-top: 0;
-}
-h2 {
-  font-size: 3vw;
+  color: #113c2e;
 }
 a {
   color: #f00;
+}
+h2 + p {
+  font-size: 0.8em;
+  font-style: italic;
+  margin: 1em auto 0;
+  max-width: 70%;
+  text-align: center;
 }
 
 /* HEADER STYLES */
@@ -22,17 +27,35 @@ a {
   display: inline-block;
   margin-left: 1em;
 }
+.header-nav > li ~ li {
+  border-left: 1px dashed rgba(255, 255, 255, 0.5);
+  padding-left: 1em;
+}
 .header-nav a {
-  color: #fff;
+  color: #ebf9f5;
   font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
 }
-
+.header-nav a:hover,
+.header-nav a:active {
+  color: #16503d;
+}
+.header-nav > li:first-child a {
+  color: #16503d;
+}
+.header-nav > li:first-child a:hover {
+  color: #ebf9f5;
+}
+.header-logo:hover,
+.header-logo:active {
+  opacity: 0.5;
+}
 /* HERO STYLES */
 .full-hero {
-  background-color: #36b592;
+  /* background-color: #00B490; */
+  background-color: #5cd1ac;
   height: 25vw;
 }
 
@@ -53,6 +76,10 @@ a {
   text-decoration: none;
   vertical-align: middle;
   width: 2.5em;
+}
+.social-link:hover,
+.social-link:active {
+  background: #16503d;
 }
 .social-list {
   list-style: none;
