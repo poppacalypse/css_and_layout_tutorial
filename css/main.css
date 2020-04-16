@@ -1,11 +1,17 @@
 /* GLOBAL STYLES */
+html {
+  box-shadow: 0 0 0 30px #36b592 inset;
+  padding: 0 30px;
+}
 body {
   font-family: Helvetica, Arial, sans;
+  background-color: #fafafa;
+  color: #494e50;
 }
 h1 {
   font-size: 7vw;
   margin-top: 0;
-  color: #113c2e;
+  color: #3b3b4d;
 }
 a {
   color: #f00;
@@ -19,6 +25,13 @@ h2 + p {
 }
 
 /* HEADER STYLES */
+.header {
+  background-color: #36b592;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+}
 .header-nav {
   float: right;
   padding: 5.5vh 60px 0 0;
@@ -32,21 +45,33 @@ h2 + p {
   padding-left: 1em;
 }
 .header-nav a {
-  color: #ebf9f5;
+  color: #fff;
   font-size: 1.2rem;
-  font-weight: bold;
   text-decoration: none;
-  text-transform: uppercase;
 }
 .header-nav a:hover,
 .header-nav a:active {
-  color: #16503d;
+  color: #3b3b4d;
 }
 .header-nav > li:first-child a {
-  color: #16503d;
+  color: #3b3b4d;
 }
 .header-nav > li:first-child a:hover {
-  color: #ebf9f5;
+  color: #fff;
+}
+.header-logo {
+  box-sizing: border-box;
+  display: block;
+  height: 11vh;
+  left: -30px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  width: 11vh;
+}
+.header-logo img {
+  height: 80%;
+  width: 4.3vh;
 }
 .header-logo:hover,
 .header-logo:active {
@@ -54,8 +79,7 @@ h2 + p {
 }
 /* HERO STYLES */
 .full-hero {
-  /* background-color: #00B490; */
-  background-color: #5cd1ac;
+  background-color: #f1f1f1;
   height: 25vw;
 }
 
