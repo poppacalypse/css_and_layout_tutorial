@@ -10,19 +10,18 @@ body {
   color: #494e50;
 }
 h1 {
+  color: #3b3b4d;
   font-size: 7vw;
   margin-top: 0;
-  color: #3b3b4d;
+}
+h2 {
+  font-size: 2em;
 }
 a {
-  color: #f00;
+  color: #3b3b4d;
 }
-h2 + p {
-  font-size: 0.8em;
-  font-style: italic;
-  margin: 1em auto 0;
-  max-width: 70%;
-  text-align: center;
+p {
+  line-height: 1.5;
 }
 
 /* HEADER STYLES */
@@ -87,20 +86,17 @@ h2 + p {
   padding: 10vh 0 15vh;
   text-align: center;
 }
-.footer img {
+.footer-logo img {
   width: 50px;
 }
 .footer h3 {
   color: #fff;
-  padding-top: 1.5em;
+  padding: 1.5em 0;
   text-transform: uppercase;
   font-size: 1.2em;
 }
 .footer h3 span {
   color: #3b3b4d;
-}
-.footer-nav {
-  font-size: 1em;
 }
 .footer-nav li {
   display: inline-block;
@@ -112,7 +108,50 @@ h2 + p {
 /* HERO STYLES */
 .full-hero {
   background-color: #f1f1f1;
-  height: 25vw;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 100vh;
+  padding-top: 10vh;
+}
+.full-hero:before {
+  content: "Before";
+  position: absolute;
+  top: 11vh;
+  right: 50%;
+  transform: translate(50%, 0)
+}
+.full-hero:after {
+  border: 10px solid;
+  border-color: #fff transparent transparent;
+  bottom: 2vh;
+  content: "";
+  height: 0;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  width: 0;
+}
+.hero-home {
+  background-image: url(/images/shark.jpg);
+  background-position: center top;
+}
+.hero-content {
+  color: #fff;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.hero-content h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 7vw;
+  margin-bottom: 0.25em;
+}
+}
+.hero-content .social-link {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #36b592;
 }
 
 /* SOCIAL STYLES */
@@ -147,6 +186,31 @@ h2 + p {
   margin: 0 0.5em;
 }
 
+/* HOMEPAGE STYLES */
+.home-callout {
+  background-color: #36b592;
+  color: #fff;
+  padding: 7vh 0;
+}
+.callout-title {
+  font-size: 5.75vw;
+  text-align: right;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px #e6e6e6;
+}
+.callout-copy {
+  font-size: 0.8rem;
+}
+.home-section {
+  max-width: 980px;
+  margin: 6rem auto;
+  width: 90vw;
+}
+.home-section h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
 /* BIO STYLES */
 .bio-wrapper {
   font-size: 24px;
@@ -155,34 +219,29 @@ h2 + p {
   overflow: hidden;
 }
 .bio-box {
-  border: 1px solid;
-  /* border-width: 10px 10px 10px 10px;
-  border-style: groove dashed double outset;
-  border-color: #0f0 #f0f #000 #0ff; */
-  border-color: #2faaa5;
   box-sizing: border-box;
   float: left;
   font-size: 1rem;
-  margin: 40px 1% 0;
-  padding: 2%;
-  width: 23%;
+  margin: 6rem 0 0;
+  padding: 0 3%;
+  width: 33%;
 }
 .bio-box h3 {
   color: #fff;
   font-size: 1.5em;
   margin: -40px 0 1em;
   text-align: center;
+  text-transform: uppercase;
 }
 .bio-box img {
   width: 100%;
 }
 .bio-box .social-link {
   display: block;
-  margin: 2em 0 1em;
+  margin: 2em auto 1em;
 }
 .bio-copy {
-  font-size: 1em;
-  line-height: 1.5;
+  font-size: 0.75em;
 }
 .bio-copy a {
   color: #2faaa5;
