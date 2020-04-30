@@ -1,0 +1,15 @@
+  <div class="blog-posts">
+    <header class="post-header">
+      <a href="{{ post.url }}">
+      <h2>{{ post.title }}</h2>
+      <h3>{{ post.subtitle }}</h3></a>
+      <div class="post-byline">
+        <span> {{ post.date | date_to_long_string }}</span> \\ by {{ post.author }}
+      </div>
+    </header>
+    <div class="posts-image" style="background-image:url('{{ post.postHero }}')">
+    </div>
+    <p>
+      {{ post.excerpt }} ... <a class="read-more" href="{{ post.url }}">Continue Reading</a>
+    </p>
+  </div>

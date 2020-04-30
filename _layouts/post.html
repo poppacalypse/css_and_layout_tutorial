@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="post">
+  <div class="half-hero" style="background-image:url({{ page.postHero }})">
+  </div>
+
+  <article class="page">
+    <header class="post-header">
+      <h2>{{ page.title }}</h2>
+      <h3>{{ page.subtitle }}</h3>
+      <div class="post-byline">
+        <span>Updated {{ page.date | date_to_long_string }} \\ by {{ page.author }}</span>
+      </div>
+    </header>
+    <aside class="post-aside">
+      {% include recent-posts.html %}
+    </aside>
+    <div class="post-content">
+      {{ content }}
+    </div>
+    <footer class="post-footer">
+      {{ page.postFooter }}
+    </footer>
+  </article>
+</div>
