@@ -51,18 +51,21 @@ p {
 .header-nav > li ~ li {
   padding-left: 1em;
 }
-.header-nav a {
+.header-nav a,
+.drop-trigger {
   color: #fff;
 }
-.nav-links a {
+.nav-links a,
+.drop-trigger {
   font-size: 1.2rem;
   text-decoration: none;
-  padding: 0.2em 1em;
+  padding: 0.5em 1em;
 }
 .nav-links a:hover,
 .nav-links a:active {
   background: #658dc6;
   color: #fff;
+  border-radius: 5px;
 }
 .header-logo {
   box-sizing: border-box;
@@ -83,6 +86,112 @@ p {
   opacity: 0.5;
 }
 
+/* DROPDOWN STYLES */
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .drop-menu {
+  display: block;
+}
+.dropdown:hover .drop-trigger:after {
+  border-color: #2fa transparent transparent;
+}
+.drop-trigger {
+  display: inline-block;
+  padding-right: 15em;
+  position: relative;
+}
+.drop-trigger:after {
+  border: 0.3em solid;
+  border-color: #fff transparent transparent;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: 0.9em;
+  width: 0;
+}
+.drop-menu {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  display: none;
+  list-style: none;
+  position: absolute;
+  right: 0;
+  z-index: 9;
+}
+.drop-menu:before {
+  border: 0.6em solid;
+  border-color: transparent transparent #fafafa;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 1em;
+  top: -1em;
+  width: 0;
+}
+.drop-menu li {
+  background-color: #fafafa;
+}
+.drop-menu li ~ li {
+  border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
+.drop-menu li:first-child {
+  border-radius: 5px 5px 0 0;
+  color: #999;
+  font-size: 0.5em;
+  padding: 1em 1em 0.25em;
+  text-align: right;
+  text-transform: uppercase;
+}
+.drop-menu li:last-child {
+  border-radius: 0 0 5px 5px;
+}
+.drop-menu a {
+  color: #004680;
+  display: block;
+  font-weight: normal;
+  padding: 0.5em 1.5em 0.5em 1em;
+  text-align: left;
+  white-space: nowrap;
+}
+/* HIDE IN THE FOOTER */
+/* .footer .dropdown:hover .drop-menu,
+.footer .drop-trigger:after {
+  display: none;
+}
+.footer .drop-trigger {
+  padding-right: 0;
+} */
+.footer .dropdown:hover .drop-trigger:after {
+  border-color: transparent transparent #2fa;
+}
+.footer .drop-trigger:after {
+  border-color: transparent transparent #fff;
+  top: auto;
+  bottom: 0.9em;
+}
+.footer .drop-menu {
+  bottom: 2.4em;
+  box-shadow: 0 0 10px 0 rgba(101, 141, 198,1);
+  right: auto;
+}
+.footer .drop-menu:before {
+  border-color: #fafafa transparent transparent;
+  left: 1em;
+  top: auto;
+  bottom: -1em;
+}
+.footer .drop-menu a {
+  color: #004680;
+}
+.footer .drop-menu li:first-child {
+  text-align: left;
+}
+.footer .drop-menu li:last-child {
+  padding-bottom: 0.2em;
+}
+
+
 /* FOOTER STYLES */
 .footer {
   background-color: #004680;
@@ -101,7 +210,7 @@ p {
 .footer h3 span {
   color: #658dc6;
 }
-.footer-nav li {
+.footer-nav > li {
   display: inline-block;
   margin: 2em 1em 0;
 }
@@ -463,7 +572,7 @@ p {
   margin: 2em -2% 2em 2em;
 }
 .post-aside {
-  background-color: rgba(0, 0, 0, 0.01);
+  background-color: rgba(0, 70, 128, 0.1);
   float: right;
   margin: 0 0 2em 2em;
   padding: 2em;
@@ -521,8 +630,6 @@ p {
   }
   .post-aside {
     float: none;
-    /* background-color: rgba(101, 141, 198, 0.1); */
-    background-color: rgba(0, 70, 128, 0.1);
     margin: 0 2em 2em;
   }
   .pull-left,
