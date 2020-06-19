@@ -4,11 +4,11 @@
 
 function activateGallery() {
   let thumbnails = document.querySelectorAll("#gallery-thumbs div img");
-  let mainImage = document.querySelector("#gallery-photo > img");
+  let mainImage  = document.querySelector("#gallery-photo > img");
 
   thumbnails.forEach(function(thumbnail) {
     // Preload large images.
-    let newImageSrc = thumbnail.dataset.largeVersion;
+    let newImageSrc  = thumbnail.dataset.largeVersion;
     let largeVersion = new Image();
     largeVersion.src = newImageSrc;
 
@@ -25,10 +25,10 @@ function activateGallery() {
 
       // Update image info.
       let galleryInfo = document.querySelector("#gallery-info");
-      let title = galleryInfo.querySelector(".title");
+      let title       = galleryInfo.querySelector(".title");
       let description = galleryInfo.querySelector(".description");
 
-      title.innerHTML = thumbnail.dataset.title;
+      title.innerHTML       = thumbnail.dataset.title;
       description.innerHTML = thumbnail.dataset.description;
     });
   });

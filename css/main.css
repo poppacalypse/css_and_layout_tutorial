@@ -327,6 +327,10 @@ p {
   background-color: rgba(255, 255, 255, 0.8);
   color: #004680;
 }
+.hero-content p {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #004680;
+}
 .hero-content a {
   color: #3b3b4d; /* tk remove */
 }
